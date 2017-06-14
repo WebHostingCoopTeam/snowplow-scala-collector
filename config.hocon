@@ -80,15 +80,15 @@ collector {
 
       # Data will be stored in the following stream.
       stream {
-        region: "{{collectorSinkKinesisStreamRegion}}"
-        good: "{{collectorKinesisStreamGoodName}}"
-        bad: "{{collectorKinesisStreamBadName}}"
+      #  region: "{{collectorSinkKinesisStreamRegion}}"
+      #  good: "{{collectorKinesisStreamGoodName}}"
+      #  bad: "{{collectorKinesisStreamBadName}}"
       }
 
       # Minimum and maximum backoff periods
       backoffPolicy: {
-        minBackoff: {{collectorSinkKinesisMinBackoffMillis}}
-        maxBackoff: {{collectorSinkKinesisMaxBackoffMillis}}
+        #minBackoff: {{collectorSinkKinesisMinBackoffMillis}}
+        #maxBackoff: {{collectorSinkKinesisMaxBackoffMillis}}
       }
     }
 
@@ -108,9 +108,9 @@ collector {
     # - the combined size of the stored records reaches byte-limit or
     # - the time in milliseconds since the buffer was last emptied reaches time-limit
     buffer {
-      byte-limit: {{collectorSinkBufferByteThreshold}}
-      record-limit: {{collectorSinkBufferRecordThreshold}} # Not supported by Kafka; will be ignored
-      time-limit: {{collectorSinkBufferTimeThreshold}}
+      #byte-limit: {{collectorSinkBufferByteThreshold}}
+      #record-limit: {{collectorSinkBufferRecordThreshold}} # Not supported by Kafka; will be ignored
+      #time-limit: {{collectorSinkBufferTimeThreshold}}
     }
   }
 }
