@@ -24,7 +24,7 @@ cd /usr/local/snowplow/2-collectors/scala-stream-collector/target/scala-2.10 && 
 mkdir -p /usr/local/scalacollector/ && \
 cd /usr/local/scalacollector/ && \
 cd /usr/local/snowplow/2-collectors/scala-stream-collector/target/scala-2.10 && ls -lh && \
-mv snowplow-stream-collector-0.9.0 /usr/local/scalacollector/snowplow-stream-collector-0.9.0 && \
+mv snowplow-stream-collector-0.9.0 /usr/local/scalacollector/snowplow-stream-collector && \
 cd /; rm -Rf /usr/local/snowplow && rm -Rf /usr/local/sbt
 
 WORKDIR /usr/local/scalacollector
