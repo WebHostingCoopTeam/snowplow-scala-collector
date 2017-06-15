@@ -28,4 +28,5 @@ mv snowplow-stream-collector-0.9.0 /usr/local/scalacollector/snowplow-stream-col
 cd /; rm -Rf /usr/local/snowplow && rm -Rf /usr/local/sbt
 WORKDIR /usr/local/scalacollector
 COPY config.hocon /usr/local/scalacollector/config.hocon
+EXPOSE 80
 CMD ["./snowplow-stream-collector-0.9.0",  "--config", "config.hocon" ]
