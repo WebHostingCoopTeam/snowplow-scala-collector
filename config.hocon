@@ -75,8 +75,8 @@ collector {
         bad: "collectorKinesisStreamBadName"
       }
       backoffPolicy: {
-        minBackoff: collectorSinkKinesisMinBackoffMillis
-        maxBackoff: collectorSinkKinesisMaxBackoffMillis
+        minBackoff: 20
+        maxBackoff: 20
       }
     }
 
