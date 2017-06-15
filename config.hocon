@@ -63,6 +63,22 @@ collector {
     #         sbt logging.
     enabled = "kafka"
 
+    kinesis {
+      thread-pool-size: 10 # Thread pool size for Kinesis API requests
+      aws {
+        access-key: "iam"
+        secret-key: "iam"
+      }
+      stream {
+        region: "collectorSinkKinesisStreamRegion"
+        good: "collectorKinesisStreamGoodName"
+        bad: "collectorKinesisStreamBadName"
+      }
+      backoffPolicy: {
+        minBackoff: collectorSinkKinesisMinBackoffMillis
+        maxBackoff: collectorSinkKinesisMaxBackoffMillis
+      }
+    }
 
     kafka {
       brokers: "kafka:9092"
