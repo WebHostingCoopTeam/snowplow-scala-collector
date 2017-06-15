@@ -96,9 +96,9 @@ collector {
     # - the combined size of the stored records reaches byte-limit or
     # - the time in milliseconds since the buffer was last emptied reaches time-limit
     buffer {
-      #byte-limit: {{collectorSinkBufferByteThreshold}}
-      #record-limit: {{collectorSinkBufferRecordThreshold}} # Not supported by Kafka; will be ignored
-      #time-limit: {{collectorSinkBufferTimeThreshold}}
+      byte-limit: 5000
+      record-limit: 5000
+      time-limit: 5000
     }
   }
 }
