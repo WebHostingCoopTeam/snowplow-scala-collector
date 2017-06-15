@@ -26,7 +26,11 @@ cd /usr/local/scalacollector/ && \
 cd /usr/local/snowplow/2-collectors/scala-stream-collector/target/scala-2.10 && ls -lh && \
 mv snowplow-stream-collector-0.9.0 /usr/local/scalacollector/snowplow-stream-collector-0.9.0 && \
 cd /; rm -Rf /usr/local/snowplow && rm -Rf /usr/local/sbt
+
 WORKDIR /usr/local/scalacollector
-COPY config.hocon /usr/local/scalacollector/config.hocon
+
+COPY assets /assets
+
 EXPOSE 80
-CMD ["./snowplow-stream-collector-0.9.0",  "--config", "config.hocon" ]
+
+CMD ["/assets/start.sh" ]

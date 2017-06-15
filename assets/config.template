@@ -45,7 +45,7 @@ collector {
     # The domain is optional and will make the cookie accessible to other
     # applications on the domain. Comment out this line to tie cookies to
     # the collector's full domain
-    domain = "collector.webhosting.coop"
+    domain = "${SNOWPLOW_HOST}.${SNOWPLOW_DOMAIN}"
   }
 
   # The collector has a configurable sink for storing data in
