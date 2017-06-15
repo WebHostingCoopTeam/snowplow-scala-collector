@@ -39,6 +39,7 @@ collector {
   cookie {
     enabled = true
     #expiration = '365 days' # e.g. "365 days"
+    expiration = "365"
     # Network cookie name
     name = 'sp'
     # The domain is optional and will make the cookie accessible to other
