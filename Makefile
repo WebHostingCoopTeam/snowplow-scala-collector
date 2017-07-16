@@ -12,7 +12,7 @@ help:
 build: TAG builddocker
 
 # run a plain container
-run: NAME TAG rm .scala-collector.CID
+run: NAME TAG env rm .scala-collector.CID
 
 .scala-collector.CID:
 	$(eval NAME := $(shell cat NAME))
